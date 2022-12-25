@@ -4,6 +4,7 @@ import Header from '../components/Home/Header';
 import Title from '../components/Home/Title';
 import Search from '../components/Home/Search';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import Categories from '../components/Home/Categories';
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
         <Header />
         <Title />
         <Search />
+        <Categories />
       </ScrollView>
     </SafeAreaView>
   );

@@ -5,6 +5,7 @@ export const colors = {
   yellow: '#F5CA48',
   darkOrange: '#F26C68',
   lightOrange: '#E4723C',
+  black: '#000000',
 };
 
 export const fonts = {
