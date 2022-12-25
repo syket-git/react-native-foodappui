@@ -1,9 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
-import { colors } from './utils/theme';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Home from './screens/Home';
 
-export default function App() {
+const Stack = createNativeStackNavigator();
+
+const App = () => {
   const [loadedFont] = useFonts({
     InterRegular: require('./assets/fonts/Montserrat-Regular.ttf'),
     InterMedium: require('./assets/fonts/Montserrat-Medium.ttf'),
@@ -14,20 +16,16 @@ export default function App() {
   if (!loadedFont) return null;
 
   return (
-    <View style={styles.container}>
-      <Text style={{ backgroundColor: colors.yellow }}>
-        Open up App.js to start working on your app!
-      </Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{ headerShown: false }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
