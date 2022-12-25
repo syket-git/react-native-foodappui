@@ -16,7 +16,7 @@ const popularData = [
   {
     id: 3,
     title: 'Pepperoni Pizza',
-    image: require('../../assets/images/pizza3.png'),
+    image: require('../../assets/images/pizza2.png'),
     weight: '400 gr',
     rating: '4.5',
   },
